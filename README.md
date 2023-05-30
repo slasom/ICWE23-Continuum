@@ -4,7 +4,7 @@
 Sergio Laso and Javier Berrocal
 
 ## Requirements
-- [node.js] - evented I/O for the backend
+- [node.js](https://nodejs.org/en/download/) - evented I/O for the backend
 - [Postman](https://www.postman.com/downloads/) -  API platform for building and using APIs
 - Github account
 - Knowledge in JSON and YAML
