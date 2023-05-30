@@ -19,7 +19,7 @@ paths:
       tags:
       - User
       x-dac:
-        operand: User.temperature
+        operand: temperature
         operator:
           type: math
           name: AVG
@@ -28,7 +28,7 @@ paths:
           temporal: 1500 
       responses:
         200:
-          $ref: '#/components/responses/200'
+          $ref: '#/components/responses/200Temperature'
         404:
           $ref: '#/components/responses/404'
   /location:
@@ -38,7 +38,7 @@ paths:
       tags:
       - User
       x-dac:
-        operand: User.location
+        operand: location
         operator:
           type: specfic
           name: heatmap
@@ -47,7 +47,7 @@ paths:
           temporal: 1500 
       responses:
         200:
-          $ref: '#/components/responses/200'
+          $ref: '#/components/responses/200Location'
         404:
           $ref: '#/components/responses/404'
   /music:
@@ -57,7 +57,7 @@ paths:
       tags:
       - User
       x-dac:
-        operand: User.music
+        operand: music
         operator:
           type: specfic
           name: selectMusic
@@ -66,26 +66,19 @@ paths:
           temporal: 1500 
       responses:
         200:
-          $ref: '#/components/responses/200'
+          $ref: '#/components/responses/200Music'
         404:
           $ref: '#/components/responses/404'
     
 components:
   schemas:
-    User:
+    Temperature:
       type: object
       properties:
-        id:
-          type: string
-          example: "684B442C9"
         temperature:
           type: number
           format: double
-          example: 36.7
-        music:
-          $ref: '#/components/schemas/MusicArray'
-        location:
-          $ref: '#/components/schemas/Location'
+          example: 38.48492
     Location:
       type: object
       properties:
@@ -104,12 +97,24 @@ components:
         example: "[pop,rock,indie]"
   responses:
     
-    '200':
+    '200Location':
       description: Successful response
       content:
        application/json:
         schema:
-          $ref: '#/components/schemas/User'
+          $ref: '#/components/schemas/Location'
+    '200Temperature':
+      description: Successful response
+      content:
+       application/json:
+        schema:
+          $ref: '#/components/schemas/Temperature'
+    '200Music':
+      description: Successful response
+      content:
+       application/json:
+        schema:
+          $ref: '#/components/schemas/MusicArray'
     '404':
       description: Not found response
       content:
