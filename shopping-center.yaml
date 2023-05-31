@@ -1,6 +1,6 @@
 openapi: 3.0.2
 info:
-  title: Shoppin Center
+  title: Shopping Center
   description: >-
      This API provides us with different information about the users to use in the shopping centre to provide a better experience in the visit
   version: '1.0'
@@ -22,7 +22,7 @@ paths:
         operand: temperature
         operator:
           type: math
-          name: AVG
+          name: avg
         conditions:
           precision: 200
           temporal: 1500 
