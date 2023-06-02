@@ -1,4 +1,4 @@
-name: Android CI
+name: ICWE23-Continuum-Mobile-Android CI
 
 on:
   push:
