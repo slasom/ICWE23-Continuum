@@ -24,7 +24,7 @@ paths:
           type: math
           name: avg
         conditions:
-          precision: 200
+          precision: 10
           temporal: 1500 
       responses:
         200:
@@ -43,8 +43,8 @@ paths:
           type: specfic
           name: heatmap
         conditions:
-          precision: 200
-          temporal: 1500 
+          precision: 10
+          temporal: 1800 
       responses:
         200:
           $ref: '#/components/responses/200Location'
@@ -62,8 +62,8 @@ paths:
           type: specfic
           name: selectMusic
         conditions:
-          precision: 200
-          temporal: 1500 
+          precision: 10
+          temporal: 2000
       responses:
         200:
           $ref: '#/components/responses/200Music'
