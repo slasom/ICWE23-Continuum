@@ -17,13 +17,13 @@ exports.convertLocationFrequency = function(locations){
 }
 
 
-exports.convertLocations = function(locations,params){
+exports.convertLocations = function(locations){
     
     var locationsConverted=[];
 
     locations.forEach((disp) => {
         disp.forEach((loc) => {
-            locationsConverted.push({"latitude": loc.lat,"longitude": loc.lng})
+            locationsConverted.push({"latitude": loc.latitude,"longitude": loc.longitude})
         });
     });
 
